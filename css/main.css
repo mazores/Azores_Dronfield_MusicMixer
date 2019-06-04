@@ -1,0 +1,77 @@
+.hidden {
+	display: none;
+}
+
+/*HEADER TITLE*/
+.title {
+	height: 72px;
+	padding: 20px;
+	margin-top: 30px;
+	margin-bottom: 30px;
+}
+
+h2 {
+	font-family: 'Lilita One', cursive;
+	font-size: 72px;
+	text-align: center;
+	color: #ff4b27;
+}
+
+/*SCENES - DROP AREA*/
+.scene {
+	width: 100%;
+	height: 720px;
+}
+
+.sceneContainer {
+	width: 630px;
+	height: 630px;
+	margin: 0 auto;
+	position: relative;
+	background-color: #ef6c4d;
+	border: 20px solid #ff4b27;
+	border-radius: 10px;
+}
+
+.drop-zones img {
+	position: absolute;
+}
+
+.dirtfloor img {
+	bottom: 20px;
+}
+
+.plants img {
+	bottom: 80px;
+}
+
+.tentfloor img {
+	bottom: 0;
+}
+
+.radio img {
+	left: 135px;
+	bottom: 30px;
+}
+
+.tent img {
+	top: 0;
+}
+
+/*ICONS - DRAG AREA*/
+.icons {
+	width: 100%;
+	height: 320px;
+	padding-bottom: 50px;
+}
+.iconsContainer {
+	width: 630px;
+	height: 320px;
+	margin: 0 auto;
+}
+
+.iconsContainer img {
+	margin: 10px 8px;
+}
+
+

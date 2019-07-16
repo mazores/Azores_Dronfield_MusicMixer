@@ -11,14 +11,6 @@ They can plug in their headphones and drag and drop their favourite relaxing sou
 
 Use your mouse to click the icon of the sound you'd like to hear. Drop it over the area on the graphic that matches the noise. (ex. Camp fire icon to camp fire on graphic.)
 
-
-## Help
-
-Any advise for common problems or issues.
-```
-command to run if program contains helper info
-```
-
 ## Authors
 
 Contributors names and contact info

@@ -9,7 +9,7 @@
 	margin-top: 30px;
 	margin-bottom: 30px;
 }
- 
+
 h2 {
 	font-family: 'Lilita One', cursive;
 	font-size: 72px;
@@ -80,9 +80,11 @@ h2 {
 	width: 961px;
 	height: 165px;
 	margin: 0 auto;
+
 }
 
 .iconsContainer img {
+	width: 11.5%;
 	margin: 10px 3px;
 }
 
@@ -90,4 +92,3 @@ h2 {
 	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
 	filter: grayscale(0);
 }
-

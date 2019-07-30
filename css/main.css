@@ -89,6 +89,6 @@ h2 {
 }
 
 .addColor {
-	-webkit-filter: grayscale(0); /* Safari 6.0 - 9.0 */
-	filter: grayscale(0);
+	-webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
+		filter: grayscale(0) !important ;
 }

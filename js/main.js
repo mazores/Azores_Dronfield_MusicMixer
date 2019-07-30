@@ -28,8 +28,9 @@
 			debugger;
 
 			//When we drop an icon on the Scene, we want the right drop zone to be coloured!
-			//So we add the class "addColor" to the target drop zone
-			e.target.classList.add("addColor");
+			//So we add the class "addColor" to the img of the targeted drop zone
+
+			this.classList.add("addColor");
 		});
 	});
 })();

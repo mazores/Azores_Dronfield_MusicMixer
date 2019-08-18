@@ -79,7 +79,7 @@
 		zone.addEventListener("drop", function(e) {
 			e.preventDefault();
 			console.log("You dropped something on me!");
-			debugger;
+			//debugger;
 
 			//When we drop an icon on the Scene, we want the right drop zone to be coloured!
 			//So we add the class "addColor" to the img of the targeted drop zone

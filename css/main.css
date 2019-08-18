@@ -33,63 +33,59 @@ h2 {
 	border-radius: 10px;
 }
 
-.drop-zones img {
+.drop-zones {
 	position: absolute;
 }
 
-.dirtfloor img {
+.drop-zones {
+	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+}
+
+.dirtfloor {
 	bottom: 20px;
 }
 
-.plants img {
+.plants {
 	right: 0;
 	bottom: 20px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-.flowers img {
+.flowers {
 	left: 100px;
 	bottom: 80px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
+}
+
+.bonfire {
+	right: 300px;
+    bottom: 60px;
 }
 
 .bonfire img {
-	left: 100px;
-	bottom: 80px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
+	width: 130px;
 }
 
-.tentfloor img {
+
+.tentfloor {
 	bottom: 0;
+	position: absolute;
 }
 
-.radio img {
+.radio {
 	left: 150px;
 	bottom: 35px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-.tent-left img {
+.tent-left {
 	top: 0;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-.tent-right img {
+.tent-right {
 	right: 0;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-
-.lake img {
+.lake {
 	bottom: 0;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
 /*ICONS - DRAG AREA*/
@@ -112,5 +108,5 @@ h2 {
 
 .addColor {
 	-webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
-		filter: grayscale(0) !important ;
+	filter: grayscale(0) !important ;
 }

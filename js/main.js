@@ -5,7 +5,25 @@
 
 	//setting up our variables
 	const dropZones = document.querySelectorAll(".drop-zones"),
-		draggableIcons = document.querySelectorAll(".iconsContainer img");
+		draggableIcons = document.querySelectorAll(".iconsContainer img"),
+
+		//make variables for each icon
+		fireIcon = document.querySelector("#fire"),
+		leavesIcon = document.querySelector("#leaves"),
+		radioIcon = document.querySelector("#radio"),
+		waterIcon = document.querySelector("#water"),
+		windIcon = document.querySelector("#wind"),
+		thunderIcon = document.querySelector("#thunder"),
+		cricketIcon = document.querySelector("#cricket"),
+		birdsIcon = document.querySelector("#birds"),
+
+
+		//make variables for each drop zones
+		fireZone = document.querySelector(".bonfire"),
+		leavesZone = document.querySelector(".plants"),
+		radioZone = document.querySelector(".radio"),
+		waterZone = document.querySelector(".lake"),
+		windZone = document.querySelector(".flowers");
 
 	//We want to be able to drag the icons..
 	//So we add event listeners
@@ -30,7 +48,15 @@
 			//When we drop an icon on the Scene, we want the right drop zone to be coloured!
 			//So we add the class "addColor" to the img of the targeted drop zone
 
-			this.classList.add("addColor");
+			
 		});
 	});
+
+	//function bonfireStart(event) {
+	//	console.log('Dropped');
+	//	e.dataTransfer.setData("text/plain", this.id);
+	//	fireZone.classList.add("addColor");
+	//}
+
+	//fireIcon.addEventListener("onDrop", bonfireStart);
 })();

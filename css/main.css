@@ -18,6 +18,58 @@ h2 {
 }
 
 /*SCENES - DROP AREA*/
+#instructions {
+	display: none;
+}
+
+.instructionsCont {
+	width: 961px;
+	height: 487px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	background-color: #ef6c4d;
+	border: 20px solid #ff4b27;
+	border-radius: 10px;
+	z-index: 1;
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+.close {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	display: pointer;
+}
+
+#instructions.open {
+	display: block!important;
+}
+
+#instructions a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+#instructions h2 {
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
+#instructions h3 {
+	font-family: 'Lilita One', cursive;
+	font-size: 36px;
+	text-align: center;
+	color: #ffffff;
+	margin-bottom: 10px;
+}
+
 .scene {
 	width: 100%;
 	height: 550px;
@@ -33,76 +85,95 @@ h2 {
 	border-radius: 10px;
 }
 
-.drop-zones img {
+.drop-zones {
 	position: absolute;
 }
 
-.dirtfloor img {
+.drop-zones {
+	-webkit-filter: grayscale(100%);
+  	filter: grayscale(100%);
+}
+
+.dirtfloor {
 	bottom: 20px;
 }
 
-.plants img {
+.plants {
 	right: 0;
 	bottom: 20px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-.flowers img {
+.flowers {
 	left: 100px;
 	bottom: 80px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
+}
+
+.bonfire {
+	right: 300px;
+    bottom: 60px;
 }
 
 .bonfire img {
-	left: 100px;
-	bottom: 80px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
+	width: 130px;
 }
 
-.tentfloor img {
+
+.tentfloor {
 	bottom: 0;
+	position: absolute;
+	-webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
+	filter: grayscale(0) !important ;
 }
 
-.radio img {
+.background {
+	top: 0;
+	position: absolute;
+	-webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
+	filter: grayscale(0) !important ;
+}
+
+.dirtfloor {
+	bottom: 0;
+	position: absolute;
+	-webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
+	filter: grayscale(0) !important ;
+}
+
+.radio {
 	left: 150px;
 	bottom: 35px;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-.tent-left img {
+.tent-left {
 	top: 0;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-.tent-right img {
+.tent-right {
 	right: 0;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
-
-.lake img {
+.lake {
 	bottom: 0;
-	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
-  	filter: grayscale(100%);
 }
 
 /*ICONS - DRAG AREA*/
 .icons {
-	width: 100%;
-	height: 165px;
-	padding-bottom: 50px;
+	width: 80%;
+    margin: 0 auto;
+    height: 165px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
+
 .iconsContainer {
-	width: 961px;
 	height: 165px;
 	margin: 0 auto;
-
+	display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .iconsContainer img {
@@ -112,5 +183,5 @@ h2 {
 
 .addColor {
 	-webkit-filter: grayscale(0) !important; /* Safari 6.0 - 9.0 */
-		filter: grayscale(0) !important ;
+	filter: grayscale(0) !important ;
 }

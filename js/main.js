@@ -13,53 +13,35 @@
 		radioIcon = document.querySelector("#radio"),
 		waterIcon = document.querySelector("#water"),
 		windIcon = document.querySelector("#wind"),
-		thunderIcon = document.querySelector("#thunder"),
-		cricketIcon = document.querySelector("#cricket"),
-		birdsIcon = document.querySelector("#birds"),
-
 
 		//make variables for each drop zones
 		fireZone = document.querySelector(".bonfire"),
 		leavesZone = document.querySelector(".plants"),
+		flowersZone = document.querySelector(".flowers"),
 		radioZone = document.querySelector(".radio"),
 		waterZone = document.querySelector(".lake"),
-		windZone = document.querySelector(".flowers");
+		windZoneLeft = document.querySelector(".tent-left"),
+		windZoneRight = document.querySelector(".tent-right");
 
+		//buttons
+	var reset = document.querySelector("#reset");
+	var	howTo = document.querySelector("#how-to");	
+	var	instructions = document.querySelector("#instructions");	
+	var closeButton = document.querySelector(".close");
 
+	//function resetSound() {
+	//	e.preventDefault();
+	//	console.log('Hi');
+	//	 fireAudio.pause();
+ 	//}
 
-	//creates audio element for icons
-	let fireAudio = document.createElement('audio');
-	fireAudio.src = "audio/fire.mp3";
-	fireAudio.load();
+ 	function openInstructions() {
+ 		instructions.classList.toggle("open");
+ 	}
 
-	// let leavesAudio = document.createElement('audio');
-	// leavesAudio.src = "audio/.mp3";
-	// leavesAudio.load();
-
-	// let radioAudio = document.createElement('audio');
-	// radioAudio.src = "audio/.mp3";
-	// radioAudio.load();
-
-	let waterAudio = document.createElement('audio');
-	waterAudio.src = "audio/water.mp3";
-	waterAudio.load();
-
-	let windAudio = document.createElement('audio');
-	windAudio.src = "audio/wind.mp3";
-	windAudio.load();
-
-	let thunderAudio = document.createElement('audio');
-	thunderAudio.src = "audio/thunder.mp3";
-	thunderAudio.load();
-
-	let cricketAudio = document.createElement('audio');
-	cricketAudio.src = "audio/crickets.mp3";
-	cricketAudio.load();
-
-	let birdsAudio = document.createElement('audio');
-	birdsAudio.src = "audio/birds.mp3";
-	birdsAudio.load();
-
+ 	function closeInstructions() {
+ 		instructions.classList.toggle("open");
+ 	}
 
 	//We want to be able to drag the icons..
 	//So we add event listeners
@@ -67,6 +49,7 @@
 		icon.addEventListener("dragstart", function(e) {
 			//Check to see if the Event Listener is working
 			console.log("dragging...!")
+			e.dataTransfer.setData("text/plain", this.id);
 		});
 	});
 
@@ -77,16 +60,83 @@
 		});
 
 		zone.addEventListener("drop", function(e) {
-			e.preventDefault();
+			let draggedElement = e.dataTransfer.getData("text/plain");
+			console.log('you dragged:', draggedElement);
+			//e.preventDefault();
 			console.log("You dropped something on me!");
-			debugger;
 
 			//When we drop an icon on the Scene, we want the right drop zone to be coloured!
 			//So we add the class "addColor" to the img of the targeted drop zone
 
-			this.classList.add("addColor");
+			if (draggedElement == 'fire') {
+				fireZone.classList.add("addColor");
 
 
+				let fireAudio = document.createElement('audio');
+				fireAudio.src = "audio/fire.mp3";
+
+				fireAudio.load();
+				fireAudio.currentTime = 0;
+				fireAudio.play();
+				fireAudio.loop = true;
+				fireAudio.volume = 1.0;
+
+				console.log('fire color added');
+			} else if (draggedElement == 'leaves') {
+				flowersZone.classList.add("addColor");
+				leavesZone.classList.add("addColor");
+
+				let leavesAudio = document.createElement('audio');
+				leavesAudio.src = "audio/leaves.mp3";
+				leavesAudio.load();
+				leavesAudio.currentTime = 0;
+				leavesAudio.play();
+				leavesAudio.loop = true;
+				leavesAudio.volume = 0.05;
+
+				console.log('leaves color added');
+			} else if (draggedElement == 'radio') {
+				radioZone.classList.add("addColor");
+
+				let radioAudio = document.createElement('audio');
+				radioAudio.src = "audio/radio.mp3";
+				radioAudio.load();
+				radioAudio.currentTime = 0;
+				radioAudio.play();
+				radioAudio.loop = true;
+				radioAudio.volume = 0.09;
+
+				console.log('radio color added');
+			} else if (draggedElement == 'water') {
+				waterZone.classList.add("addColor");
+
+				let waterAudio = document.createElement('audio');
+				waterAudio.src = "audio/water.mp3";
+				waterAudio.load();
+				waterAudio.currentTime = 0;
+				waterAudio.play();
+				waterAudio.loop = true;
+				waterAudio.volume = 0.1;
+
+				console.log('water color added');
+			} else if (draggedElement == 'wind') {
+				windZoneLeft.classList.add("addColor");
+				windZoneRight.classList.add("addColor");
+
+				let windAudio = document.createElement('audio');
+				windAudio.src = "audio/tent.mp3";
+				windAudio.load();
+				windAudio.currentTime = 0;
+				windAudio.play();
+				windAudio.loop = true;
+				windAudio.volume = 0.3;
+				console.log('tent color added');
+			} else {
+				return;
+			}
 		});
 	});
+
+	howTo.addEventListener('click', openInstructions);
+	closeButton.addEventListener('click', closeInstructions);
 })();

@@ -21,16 +21,25 @@
 
 	<section class="scene">
 		<h1 class="hidden">Drop Area</h1>
+		<div id="instructions">
+			<div class="instructionsCont">
+				<div class="close"><h3>x</h3></div>
+				<h2>How to Play</h2>
+				<h3>Drag the icons in order to get transported into the lake!</h3>
+				<h3>Press the reset button to restart everything.</h3>
+			</div>
+		</div>
+
 		<div class="sceneContainer">
 			<div class="drop-zones lake">
 				<img src="images/lake.png" alt="view of the lake against mountains and forests">
 			</div>
 
-			<div class="drop-zones background">
+			<div class="background">
 				<img src="images/background.png" alt="view of the lake against mountains and forests">
 			</div>
 
-			<div class="drop-zones dirtfloor">
+			<div class="dirtfloor">
 				<img src="images/dirt_floor.png" alt="the floor where the tent is pitched on">
 			</div>
 			<div class="drop-zones plants">
@@ -42,7 +51,7 @@
 			</div>
 
 			<div class="drop-zones bonfire">
-				<img src="images/fire.svg" alt="bonfire">
+				<img src="images/fireZone.png" alt="bonfire">
 			</div>
 
 			<div class="drop-zones tentfloor">
@@ -66,12 +75,11 @@
 		<div class="iconsContainer">
 			<img id="fire" src="images/fire.svg" alt="fire" draggable>
 			<img id="leaves" src="images/leaves.svg" alt="leaves" draggable>
-			<img id="birds" src="images/birds.svg" alt="birds" draggable>
 			<img id="radio" src="images/radio.svg" alt="radio" draggable>
 			<img id="water" src="images/water.svg" alt="water" draggable>
 			<img id="wind" src="images/wind.svg" alt="wind" draggable>
-			<img id="thunder" src="images/thunder.svg" alt="thunder" draggable>
-			<img id="cricket" src="images/cricket.svg" alt="cricket" draggable>
+			<img id="reset" class="buttons" src="images/reset.svg" alt="reset button">
+			<img id="how-to" class="buttons" src="images/how-to-play.svg" alt="how to play button">
 		</div>
 	</section>
 
